@@ -58,7 +58,7 @@ export default function TopRanked({ onBack }: { onBack: () => void }) {
           <TouchableOpacity onPress={onBack} className="p-2 rounded-full bg-white/10 active:opacity-60">
             <ArrowLeft color="white" size={24} />
           </TouchableOpacity>
-          <Text className="text-white text-xl font-bold tracking-tight">Leaderboard</Text>
+          <Text className="text-white text-xl font-bold tracking-tight">Top Ranked</Text>
           <TouchableOpacity className="p-2 rounded-full bg-white/10 active:opacity-60">
             <Crown color="white" size={20} />
           </TouchableOpacity>
@@ -78,7 +78,7 @@ export default function TopRanked({ onBack }: { onBack: () => void }) {
             </View>
           </View>
           <Text className="text-gray-800 font-bold mt-2 text-xs">{TOP_WORKERS[1].name}</Text>
-          <Text className="text-[#1FA2A6] text-[10px] font-bold">{TOP_WORKERS[1].points.toLocaleString()} pts</Text>
+        
         </TouchableOpacity>
 
         {/* Podium Rank 1 (Alex M.) */}
@@ -86,14 +86,14 @@ export default function TopRanked({ onBack }: { onBack: () => void }) {
           onPress={() => handleProfilePress(TOP_WORKERS[0])}
           className="items-center mx-2 active:scale-95"
         >
-          <Award size={24} color="#FF7A45" className="mb-1" />
-          <View className="w-24 h-24 rounded-full border-4 border-[#FF7A45] bg-white items-center justify-center p-1 shadow-xl">
+          <Award size={24} color="#ff8f45" className="mb-1" />
+          <View className="w-24 h-24 rounded-full border-4 border-[#4bff45] bg-white items-center justify-center p-1 shadow-xl">
             <View className="w-full h-full rounded-full bg-orange-50 items-center justify-center">
               <Text className="text-[#FF7A45] font-bold text-lg">{getInitials(TOP_WORKERS[0].name)}</Text>
             </View>
           </View>
           <Text className="text-gray-800 font-bold mt-3 text-sm">{TOP_WORKERS[0].name}</Text>
-          <Text className="text-[#1FA2A6] text-xs font-bold">{TOP_WORKERS[0].points.toLocaleString()} pts</Text>
+          
         </TouchableOpacity>
 
         {/* Podium Rank 3 (Mike R.) */}
@@ -107,7 +107,7 @@ export default function TopRanked({ onBack }: { onBack: () => void }) {
             </View>
           </View>
           <Text className="text-gray-800 font-bold mt-2 text-xs">{TOP_WORKERS[2].name}</Text>
-          <Text className="text-[#1FA2A6] text-[10px] font-bold">{TOP_WORKERS[2].points.toLocaleString()} pts</Text>
+          
         </TouchableOpacity>
       </View>
 
@@ -146,7 +146,7 @@ export default function TopRanked({ onBack }: { onBack: () => void }) {
                 <Star size={10} color="#FF7A45" fill="#FF7A45" />
                 <Text className="text-gray-800 font-bold text-xs ml-1">{worker.rating}</Text>
               </View>
-              <Text className="text-[#1FA2A6] text-[10px] font-bold">{worker.points.toLocaleString()} pts</Text>
+              
             </View>
           </TouchableOpacity>
         ))}
